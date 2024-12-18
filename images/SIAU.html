@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:400,500">
     <link rel="stylesheet" href="css/style.css">
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
@@ -76,25 +76,8 @@
                         </li>-->
                       </ul>
                     </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">Portafolio de Servicios y Especialidades</a>
-                      <ul class="rd-menu rd-navbar-dropdown">
-                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="Nefroproteccion.html">Programa de Nefroprotecciónsis</a>
-                        </li>
-                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="hemodialisis.html">Programa de Hemodiálisis  </a>
-                        </li>
-                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="Dialisis.html">Programa de Diálisis Peritoneal</a>
-                          
-                        </li>
-                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Servicio Farmacéutico </a>
-                        <!--li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Testimonials</a>
-                        </li>
-                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">Our Team</a>
-                        </li>
-                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#">News</a>
-                        </li>-->
-                      </ul>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="typography.html">Portafolio de Servicios y Especialidades</a>
                     </li>
-                   
                     <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">SIAU</a>
                     </li>
                     <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Destacados</a>
@@ -106,176 +89,41 @@
         </div>
       </header>
       <!--Swiper-->
-      <section class="section swiper-container swiper-slider swiper-slider-1" data-loop="true" data-autoplay="false" data-simulate-touch="false" data-slide-effect="fade">
-        <div class="swiper-wrapper text-center text-lg-left">
-          <div class="swiper-slide" data-slide-bg="images/Hemo.webp">
-            <div class="swiper-slide-caption">
-              <div class="container">
-                <div class="row center">
-                  <div >
-                    <h1 class="text-primary" data-caption-animate="fadeIn" data-caption-delay="100" style="color: #0d0d0e;">Programa de Hemodiálisis: Comprometidos con la vida</h1>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-        <!--Swiper Pagination-->
-        <div class="swiper-pagination"></div>
-        <!--Swiper Navigation-->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </section>
-      <!--About-->
-      <section class="section section-lg section-inset-1 position-relative index-1">
-        <div class="container offset-negative-1">
-          <div class="row no-gutters">
-            
-            <div class="col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay=".05s">
-              
-            </div>
-            
-            <div class="col-sm-10 col-lg-8 wow fadeInUp" data-wow-delay=".05s">
-              <article class="box-default">
-                <div class="box-default-icon fa-briefcase"></div>
-                <h4 class="box-default-title">En Salud Renal <br></h4>
-                <div class="box-default-text">sabemos que la hemodiálisis es más que un tratamiento; es un proceso que
-                  mejora y prolonga la vida de nuestros pacientes. Nuestro Programa de Hemodiálisis está
-                  diseñado para ofrecer atención integral y personalizada a quienes enfrentan la insuficiencia
-                  renal crónica, garantizando calidad, seguridad y bienestar.</div>
-              </article>
-            </div>
-          </div>
-          
-          <div class="row row-30 bordered">
-            <div class="col-md- wow fadeInRight">
-              <article class="box-minimal">
-                <div class="unit unit-spacing-md flex-column flex-sm-row text-center text-sm-left">
-                  <div class="unit-left">
-                    <div class="box-minimal-icon fa-group"></div> 
-                  </div>
-                  <div class="unit-body">
-                    <h4 class="box-minimal-title"><a href="#">¿Qué es la hemodiálisis?</a></h4>
-                    <div class="box-minimal-text">La hemodiálisis es un procedimiento médico que reemplaza la función de los riñones cuando ya
-                      no pueden eliminar toxinas, líquidos y desechos del cuerpo. En este tratamiento, una máquina
-                      especializada filtra la sangre del paciente, permitiendo que su cuerpo mantenga un equilibrio
-                      saludable</div>
-                  </div>
-                </div>
-              </article>
-            </div>
+      <div class="container2">
+        <h1>Contáctanos</h1>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <label for="name">Nombre Completo *</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
 
-           
-            <div class="col-md-6 wow fadeInRight" data-wow-delay=".1s">
-              
-            </div>
-            <div class="col-sm-6 col-lg-12 wow fadeInUp" data-wow-delay=".05s">
-              <article class="box-default">
-                <div class="box-default-icon fa-briefcase"></div>
-                <h4 class="box-default-title">¿Cómo funciona nuestro programa? <br></h4>
-                
-              </article>
-            </div>
-            <div class="col-md-6 wow fadeInRight" data-wow-delay=".1s">
-              <article class="box-minimal">
-                <div class="unit unit-spacing-md flex-column flex-sm-row text-center text-sm-left">
-                  <div class="unit-left">
-                    <div class="box-minimal-icon fa-thumbs-up"></div>
-                  </div>
-                  <div class="unit-body">
-                    <h4 class="box-minimal-title"><a href="#">Atención especializada:</a></h4>
-                    <div class="box-minimal-text">Nuestro equipo médico y de enfermería está altamente
-                      capacitado para garantizar un tratamiento seguro y eficaz en cada sesión</div>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 wow fadeInRight" data-wow-delay=".15s">
-              <article class="box-minimal">
-                <div class="unit unit-spacing-md flex-column flex-sm-row text-center text-sm-left">
-                  <div class="unit-left">
-                    <div class="box-minimal-icon fa-thumbs-up"></div>
-                  </div>
-                  <div class="unit-body">
-                    <h4 class="box-minimal-title"><a href="#">Tecnología avanzada</a></h4>
-                    <div class="box-minimal-text">Contamos con equipos modernos que cumplen con los más
-                      altos estándares de calidad y cuidado.</div>
-                  </div>
-                </div>
-              </article>
-            </div>
-            
+            <label for="email">Correo Electrónico *</label>
+            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
 
-            <div class="col-md-6 wow fadeInRight" data-wow-delay=".1s">
-              <article class="box-minimal">
-                <div class="unit unit-spacing-md flex-column flex-sm-row text-center text-sm-left">
-                  <div class="unit-left">
-                    <div class="box-minimal-icon fa-thumbs-up"></div>
-                  </div>
-                  <div class="unit-body">
-                    <h4 class="box-minimal-title"><a href="#">Entorno humanizado</a></h4>
-                    <div class="box-minimal-text">Sabemos que cada paciente es único, por eso ofrecemos un
-                      trato respetuoso, cálido y personalizado en un ambiente cómodo y seguro.</div>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 wow fadeInRight" data-wow-delay=".15s">
-              <article class="box-minimal">
-                <div class="unit unit-spacing-md flex-column flex-sm-row text-center text-sm-left">
-                  <div class="unit-left">
-                    <div class="box-minimal-icon fa-thumbs-up"></div>
-                  </div>
-                  <div class="unit-body">
-                    <h4 class="box-minimal-title"><a href="#">Educación continua</a></h4>
-                    <div class="box-minimal-text">Informamos y capacitamos a nuestros pacientes y sus familias
-                      sobre el tratamiento y los cuidados que deben seguir para mantener su salud</div>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 wow fadeInRight" data-wow-delay=".15s">
-              <article class="box-minimal">
-                <div class="unit unit-spacing-md flex-column flex-sm-row text-center text-sm-left">
-                  <div class="unit-left">
-                    <div class="box-minimal-icon fa-thumbs-up"></div>
-                  </div>
-                  <div class="unit-body">
-                    <h4 class="box-minimal-title"><a href="#">Apoyo emocional</a></h4>
-                    <div class="box-minimal-text">Brindamos acompañamiento psicológico y social para mejorar la
-                      calidad de vida de nuestros pacientes durante el proceso.
-                      </div>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row row-30">
-            <div class="col-md-6 col-lg wow fadeInUp">
-              <h3> Programa de Hemodiálisis de Salud Renal</h3><img src="images/picture1.jpg" alt="" width="570" height="208"/>
-              <p>Es un pilar de salud en la región,
-                atendiendo a pacientes que antes tenían que desplazarse largas distancias para recibir
-                este tratamiento. Nuestro compromiso social con Arauca se refleja en cada acción,
-                buscando no solo mejorar la calidad de vida de nuestros pacientes, sino también
-                generar un impacto positivo en sus familias y en toda la comunidad.</p>
-            </div>
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".05s">
-              <h3>Beneficios del programa</h3>
-              
-              <ul class="list-marked-1">
-                <li><a >Mejora significativa de la salud y bienestar general.</a></li>
-                <li><a >Reducción de complicaciones relacionadas con la insuficiencia renal.</a></li>
-                <li><a >Cercanía y accesibilidad para los pacientes del Departamento de Arauca.</a></li>
-                               
-              </ul>
-            </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            <label for="phone">Teléfono *</label>
+            <input type="tel" id="phone" name="phone" placeholder="Tu número de teléfono" required pattern="[0-9]{10}">
+
+            <label for="message">Mensaje *</label>
+            <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Mapa de Google Maps -->
+    <div class="map-container">
+        <h2>Estamos Ubicados en la Calle 18 No. 12 -15 Barrio las Americas Arauca - Arauca</h2>
+        <iframe
+            src="https://www.google.com/maps?q=Tunja,Boyacá,Colombia&output=embed"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/573102874569?text=Hola,%20necesito%20más%20información" 
+   class="whatsapp-float" 
+   target="_blank" 
+   title="Contáctanos por WhatsApp">
+   <img src="images/icons8-whatsapp.svg" alt="WhatsApp" class="whatsapp-logo">
+</a>
       <!--Contacts-->
       <section class="section section-lg bg-gray-700">
         <div class="container">
