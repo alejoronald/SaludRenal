@@ -924,10 +924,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	const contentData = {
 		datos: {
-			title: "Datos Abiertos",
+			title: "Programa de Nefroprotección",
 			content: `
-				<h2>Datos Abiertos</h2>
-				<p>Aquí encontrarás información detallada sobre nuestros servicios y estadísticas...</p>
+				<h2>Programa de Nefroprotección</h2>
+				<p>En Unidad Renal, entendemos que la mejor forma de combatir las enfermedades renales es
+                          prevenirlas. Por eso, hemos desarrollado nuestro Programa de Nefroprotección, diseñado
+                          para detectar de manera temprana riesgos renales y promover hábitos saludables que protejan
+                          la función de los riñones.</p>
 				<!-- Más contenido específico -->
 			`
 		},
