@@ -914,3 +914,60 @@ document.addEventListener('DOMContentLoaded', function() {
 		});
 	});
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+	const cards = document.querySelectorAll('.info-card');
+	const modal = document.getElementById('infoModal');
+	const modalContent = document.getElementById('modalContent');
+	const closeModal = document.querySelector('.close-modal');
+
+	const contentData = {
+		datos: {
+			title: "Datos Abiertos",
+			content: `
+				<h2>Datos Abiertos</h2>
+				<p>Aquí encontrarás información detallada sobre nuestros servicios y estadísticas...</p>
+				<!-- Más contenido específico -->
+			`
+		},
+		estudios: {
+			title: "Programa de Hemodiálisis",
+			content: `
+				<h2>Programa de Hemodiálisis</h2>
+				<p>En Salud Renal, sabemos que la hemodiálisis es más que un tratamiento; es un proceso que
+mejora y prolonga la vida de nuestros pacientes. Nuestro Programa de Hemodiálisis está
+diseñado para ofrecer atención integral y personalizada a quienes enfrentan la insuficiencia
+renal crónica, garantizando calidad, seguridad y bienestar.</p>
+				<!-- Más contenido específico -->
+			`
+		},
+		convocatorias: {
+			title: "Programa de Diálisis Peritoneal",
+			content: `
+				<h2>Programa de Diálisis Peritoneal</h2>
+				<p>En Salud Renal, entendemos que cada paciente es único y
+que el tratamiento debe adaptarse a sus necesidades y estilo de vida.</p>
+				<!-- Más contenido específico -->
+			`
+		}
+	};
+
+	cards.forEach(card => {
+		card.addEventListener('click', function() {
+			const section = this.getAttribute('data-section');
+			modalContent.innerHTML = contentData[section].content;
+			modal.style.display = 'block';
+		});
+	});
+
+	closeModal.addEventListener('click', function() {
+		modal.style.display = 'none';
+	});
+
+	window.addEventListener('click', function(event) {
+		if (event.target === modal) {
+			modal.style.display = 'none';
+		}
+	});
+});
