@@ -21571,3 +21571,78 @@ iframe {
 .whatsapp-float:hover .whatsapp-logo {
     transform: scale(1.1); /* Aumenta ligeramente el tamaño */
 }
+
+.dynamic-content-section {
+	display: flex;
+	margin: 30px 0;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.menu {
+	width: 300px;
+	padding: 20px;
+	background-color: #fff;
+	border-right: 1px solid #eee;
+}
+
+.menu-item {
+	padding: 15px;
+	margin-bottom: 10px;
+	background-color: #f8f9fa;
+	border-radius: 5px;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #666;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.menu-item.active {
+	background-color: #4c8ef1;
+	color: white;
+}
+
+.menu-item:hover {
+	background-color: #e9ecef;
+}
+
+.menu-item.active:hover {
+	background-color: #4c8ef1;
+}
+
+.content2 {
+	flex: 1;
+	padding: 40px;
+}
+
+.content-section {
+	display: none;
+}
+
+.content-section.active {
+	display: block;
+}
+
+.arrow {
+	font-size: 18px;
+}
+
+.scroll-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background-color: #f15a4c;
+	color: white;
+	width: 40px;
+	height: 40px;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	font-size: 20px;
+	z-index: 1000;
+}

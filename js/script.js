@@ -883,3 +883,34 @@
 		}
 	});
 }());
+document.addEventListener('DOMContentLoaded', function() {
+	const menuItems = document.querySelectorAll('.menu-item');
+	const contentSections = document.querySelectorAll('.content-section');
+	
+	menuItems.forEach(item => {
+		item.addEventListener('click', function(e) {
+			e.preventDefault();
+			
+			// Remove active class from all menu items and content sections
+			menuItems.forEach(mi => mi.classList.remove('active'));
+			contentSections.forEach(cs => cs.classList.remove('active'));
+			
+			// Add active class to clicked menu item
+			this.classList.add('active');
+			
+			// Show corresponding content section
+			const sectionId = this.getAttribute('data-section');
+			document.getElementById(sectionId).classList.add('active');
+		});
+	});
+
+	// Scroll to top functionality
+	const scrollTopButton = document.querySelector('.scroll-top');
+	scrollTopButton.addEventListener('click', function(e) {
+		e.preventDefault();
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+		});
+	});
+});
