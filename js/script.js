@@ -974,3 +974,24 @@ que el tratamiento debe adaptarse a sus necesidades y estilo de vida.</p>
 		}
 	});
 });
+
+// Selección de elementos
+const years = document.querySelectorAll('.timeline-year');
+const events = document.querySelectorAll('.timeline-content');
+
+// Función para cambiar entre eventos
+years.forEach(year => {
+	year.addEventListener('click', () => {
+		// Quitar la clase activa de todos los años
+		years.forEach(y => y.classList.remove('active'));
+		// Añadir la clase activa al año seleccionado
+		year.classList.add('active');
+
+		// Ocultar todos los eventos
+		events.forEach(event => event.classList.add('hidden'));
+
+		// Mostrar el evento correspondiente
+		const target = document.getElementById(year.dataset.target);
+		target.classList.remove('hidden');
+	});
+});
