@@ -22034,3 +22034,134 @@ text-align: justify;
     width: 312px;
     height: 215px;
 }
+
+
+
+
+
+/* Contenedor principal */
+.slider-section2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-container2 {
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Configuración del slider */
+.slide2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide-text2 {
+    width: 45%;
+    background: linear-gradient(135deg, #02ad4a, #4B0082);
+    color: white;
+    padding: 60px 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+}
+
+.slide-image2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: scaleIn 1.2s forwards;
+}
+
+.slide-image2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Animaciones */
+h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s forwards 0.3s;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s forwards 0.6s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+}
+
+/* Estilo para la lista principal */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Ocultar submenú por defecto */
+.sub-dropdown {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    min-width: 200px;
+}
+
+/* Mostrar submenú al pasar el mouse */
+.dropdown:hover .sub-dropdown {
+    display: block;
+}
