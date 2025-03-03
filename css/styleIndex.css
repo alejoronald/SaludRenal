@@ -643,7 +643,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background: rgba(255, 255, 255, 0.7); /* Ajusta la transparencia aquí */
+background: rgba(255, 255, 255, 0.6); /* Ajusta la transparencia aquí */
 z-index: 1;
 }
 
