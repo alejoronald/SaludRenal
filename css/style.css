@@ -22762,3 +22762,158 @@ max-width: 800px;
     line-height: 1.6;
 }
 
+
+.container5 {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+/* Navegación */
+.navbar5 {
+	background-color: var(--white);
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+.navbar-content5 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 0;
+}
+
+.logo5 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: var(--primary-color);
+}
+
+.nav-links5 {
+	display: flex;
+	gap: 20px;
+}
+
+.nav-links5 a {
+	text-decoration: none;
+	color: var(--primary-color);
+	transition: color 0.3s ease;
+}
+
+.nav-links5 a:hover {
+	color: var(--secondary-color);
+}
+
+/* Secciones */
+.section5 {
+	padding: 80px 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.section-content5 {
+	display: flex;
+	align-items: center;
+	gap: 50px;
+}
+
+.section-text5 {
+	flex: 1;
+}
+
+.section-image5 {
+	flex: 1;
+	position: relative;
+}
+
+.section-image5 img {
+	width: 100%;
+	border-radius: 10px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+	transition: transform 0.5s ease;
+}
+
+.section-image5:hover img {
+	transform: scale(1.05);
+}
+
+.section-title5 {
+	font-size: 2.5rem;
+	color: var(--primary-color);
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.section-title5::after {
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	width: 80px;
+	height: 4px;
+	background-color: var(--secondary-color);
+}
+
+/* Tarjetas de objetivos */
+.objectives-grid5 {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 30px;
+	margin-top: 40px;
+}
+
+.objective-card5 {
+	background-color: var(--white);
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+	transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.objective-card5:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.objective-icon5 {
+	font-size: 2.5rem;
+	color: var(--secondary-color);
+	margin-bottom: 20px;
+}
+
+.objective-title5 {
+	font-size: 1.3rem;
+	color: var(--primary-color);
+	margin-bottom: 15px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+	.section-content5 {
+		flex-direction: column;
+	}
+
+	.nav-links5 {
+		display: none; /* Menú móvil pendiente */
+	}
+
+	.section-title5 {
+		font-size: 2rem;
+	}
+}
+
+/* Animaciones de scroll */
+.fade-in {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.active {
+	opacity: 1;
+	transform: translateY(0);
+}
