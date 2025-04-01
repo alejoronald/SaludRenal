@@ -632,17 +632,16 @@
         }
 
 
-    .hero {
+        .hero {
     position: relative;
-    background: url('images/Principal.jpeg') no-repeat center center/cover;
-    background-size: cover;
+    background: url('images/Principal.jpeg') no-repeat center center;
+    background-size: 100% 100%; /* La imagen se ajusta sin dejar espacios */
     background-attachment: fixed;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .hero::before {
     content: "";
     position: absolute;
