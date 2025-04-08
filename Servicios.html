@@ -4,94 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salud Renal - Servicios Farmacéuticos</title>
+    <link rel="stylesheet" href="css/stylesF.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/styleIndex.css">
-    <style>
-        /* Estilos generales */
-       
-        
-        .container4 {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        
-        
-       
-        
-        /* Tarjetas de servicios */
-        .services2 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .service-card2 {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            width: calc(33.333% - 30px);
-            min-width: 280px;
-            text-align: center;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-        }
-        
-        .service-card2:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(32, 178, 170, 0.2);
-        }
-        
-        .service-card2:before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(to right, #20B2AA, #38ef7d);
-            bottom: 0;
-            left: 0;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
-        }
-        
-        .service-card2:hover:before {
-            transform: scaleX(1);
-        }
-        
-        .service-icon {
-            font-size: 48px;
-            color: #20B2AA;
-            margin-bottom: 20px;
-        }
-        
-        .service-title {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: #333;
-            transition: all 0.3s ease;
-        }
-        
-        .service-card:hover .service-title {
-            color: #20B2AA;
-            transform: scale(1.1);
-        }
-        
-        .service-description {
-            color: #666;
-            line-height: 1.6;
-        }
-        
-       
-       
-      
-    </style>
+    
     
 </head>
 <body>
@@ -105,15 +21,17 @@
                 </div>
                 <div class="contact-info">
                     <p>
-                        <a href="https://wa.me/3147357506" target="_blank" style="display: flex; align-items: center; text-decoration: none;">
+                        <a href="https://wa.me/+573147357506" target="_blank" style="display: flex; align-items: center; text-decoration: none;">
                             <img src="images/icons8-whatsapp.svg" alt="WhatsApp" style="width: 40px; height: 40px; margin-right: 10px; vertical-align: middle;">
                             <span>3147357506</span>
                         </a>
                     </p>
+                <a>
                     <p style="display: flex; align-items: center;">
                         <img src="images/correo-electronico.png" alt="Email" style="width: 35px; height: 35px; margin-right: 10px;">
                         <span>contactosaludrenal@gmail.com</span>
                     </p>
+                </a>
                 </div>
             </div>
         </div>
@@ -277,86 +195,7 @@
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
-    <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
-
-        // Scroll animations
-        document.addEventListener('DOMContentLoaded', function() {
-            // Función para comprobar si un elemento está en el viewport
-            function isInViewport(element) {
-                const rect = element.getBoundingClientRect();
-                return (
-                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
-                    rect.bottom >= 0
-                );
-            }
-
-            // Función para animar elementos al hacer scroll
-            function animateOnScroll() {
-                // Servicios
-                document.querySelectorAll('.service-card').forEach((card, index) => {
-                    if (isInViewport(card) && !card.classList.contains('animated')) {
-                        card.style.animation = `fadeIn 0.6s forwards ${index * 0.2}s`;
-                        card.classList.add('animated');
-                    }
-                });
-
-                // Acerca de
-                const aboutContent = document.querySelector('.about-content');
-                const aboutImage = document.querySelector('.about-image');
-                if (isInViewport(aboutContent) && !aboutContent.classList.contains('animated')) {
-                    aboutContent.style.animation = 'fadeInLeft 0.8s forwards';
-                    aboutContent.classList.add('animated');
-                }
-                if (isInViewport(aboutImage) && !aboutImage.classList.contains('animated')) {
-                    aboutImage.style.animation = 'fadeInRight 0.8s forwards 0.2s';
-                    aboutImage.classList.add('animated');
-                }
-
-                // Portfolio
-                document.querySelectorAll('.portfolio-item').forEach((item, index) => {
-                    if (isInViewport(item) && !item.classList.contains('animated')) {
-                        item.style.animation = `scaleIn 0.6s forwards ${index * 0.2}s`;
-                        item.classList.add('animated');
-                    }
-                });
-            }
-
-            // Llamar a la función al cargar la página
-            animateOnScroll();
-
-            // Llamar a la función al hacer scroll
-            window.addEventListener('scroll', animateOnScroll);
-        });
-
-        // Smooth scrolling para enlaces internos
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    const headerOffset = 100;
-                    const elementPosition = targetElement.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                    
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Cerrar menú móvil si está abierto
-                    document.querySelector('.nav-links').classList.remove('active');
-                }
-            });
-        });
-    </script>
+    
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
 </body>
